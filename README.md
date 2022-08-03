@@ -3,19 +3,19 @@ repro of issue in Nx with importing JSON in a buildable lib using SWC
 
 ## Steps for creating this reproduction:
 
-generate nx repo with `npx create-nx-workspace@latest`
+1. generate nx repo with `npx create-nx-workspace@latest`
 - choose React for app framework
 - choose emotion for styling
 
-generatd a lib with `npx nx generate @nrwl/react:library react-buildable-swc-2 --buildable --compiler=swc --no-interactive`
+2. generate lib with `npx nx generate @nrwl/react:library react-buildable-swc-2 --buildable --compiler=swc --no-interactive`
 
-add `"resolveJsonModules": true` to `tsconfig.json`
+3. add `"resolveJsonModules": true` to `tsconfig.json`
 
-add a .json file, import it in the default component, logg contents to console.
+4. add a .json file, import it in the default component, logg contents to console.
 
-build with `npx nx build react-buildable-swc`
+5. build with `npx nx build react-buildable-swc`
 
-see error:
+6. see error:
 ```
 ❯ nx build react-buildable-swc --skip-nx-cache
 
