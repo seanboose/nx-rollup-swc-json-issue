@@ -1,13 +1,13 @@
 # nx-rollup-swc-json-issue
 repro of issue in Nx with importing JSON in a buildable lib using SWC
 
-## Steps for creating this reproduction:
+## Steps used to create this reproduction:
 
 1. generate nx repo with `npx create-nx-workspace@latest`
 - choose React for app framework
 - choose emotion for styling
 
-2. generate lib with `npx nx generate @nrwl/react:library react-buildable-swc-2 --buildable --compiler=swc --no-interactive`
+2. generate lib with `npx nx generate @nrwl/react:library react-buildable-swc --buildable --compiler=swc --no-interactive`
 
 3. add `"resolveJsonModules": true` to `tsconfig.json`
 
